@@ -1,6 +1,6 @@
+import os
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import os
 import requests
 from bs4 import BeautifulSoup
 import openai
@@ -8,6 +8,7 @@ import openai
 app = Flask(__name__)
 CORS(app)
 
+# Use the OpenAI API key from the environment variables
 openai.api_key = os.getenv('OPENAI_API_KEY')
 
 @app.route('/scrape', methods=['POST'])
