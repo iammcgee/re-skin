@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page Scraper</title>
+    <title>Landing Page Rewriter</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Landing Page Scraper</h1>
-    <form id="scraperForm">
-        <label for="url">Enter the URL of the landing page:</label>
-        <input type="url" id="url" name="url" required>
-        <label for="template">Enter the prompt for the template:</label>
-        <textarea id="template" name="template" required></textarea>
-        <button type="submit">Scrape and Rewrite</button>
+    <h1>Landing Page Rewriter</h1>
+    <form id="url-form">
+        <label for="url-input">Enter Landing Page URL:</label>
+        <input type="url" id="url-input" required>
+        <button type="submit">Rewrite</button>
     </form>
-    <div id="result"></div>
+    <div id="output">
+        <h2>Rewritten Content</h2>
+        <pre id="rewritten-content"></pre>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
