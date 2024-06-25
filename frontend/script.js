@@ -3,7 +3,7 @@ document.getElementById('scrape-form').addEventListener('submit', async function
     const url = document.getElementById('url').value;
     const template = document.getElementById('template').value;
 
-    const response = await fetch('http://localhost:5000/scrape', {
+    const response = await fetch('https://improved-space-broccoli-556vpxv7pp7fp66j-5000.app.github.dev/scrape', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
