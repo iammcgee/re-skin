@@ -1,3 +1,6 @@
+import requests
+from bs4 import BeautifulSoup
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
@@ -9,8 +12,17 @@ def scrape():
     data = request.get_json()
     url = data.get('url')
     template = data.get('template')
-    # Add scraping and rewriting logic here
-    result = {"message": "Scraping and rewriting in progress"}
+    
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    
+    # Example: Scraping the title
+    title = soup.find('title').get_text()
+    
+    # Placeholder for rewriting logic
+    rewritten_content = f"Rewritten content for {template} with title: {title}"
+    
+    result = {"rewritten_content": rewritten_content}
     return jsonify(result)
 
 if __name__ == '__main__':
