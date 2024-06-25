@@ -14,7 +14,7 @@ document.getElementById('scraperForm').addEventListener('submit', async function
     const mainContent = doc.querySelector('body').innerText;
 
     // Step 3: Use OpenAI API to rewrite the content
-    const openaiApiKey = 'your_openai_api_key_here';
+    const openaiApiKey = 'OPENAI_API_KEY';
     const prompt = `${template}\n\n${mainContent}`;
 
     const result = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
