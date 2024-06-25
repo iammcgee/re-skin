@@ -10,7 +10,7 @@ load_dotenv()  # Load environment variables from .env file
 
 app = Flask(__name__)
 
-# Configure CORS
+# Configure CORS to allow requests from all origins
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 openai.api_key = os.getenv('OPENAI_API_KEY')
@@ -44,5 +44,6 @@ def scrape():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=5000, debug=True)
+
 
 
