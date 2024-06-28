@@ -12,4 +12,11 @@ form {
 
 #output {
     display: none;
+    margin-top: 20px;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border: 1px solid #ddd;
 }
